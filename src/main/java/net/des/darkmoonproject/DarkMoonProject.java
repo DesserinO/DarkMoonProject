@@ -1,6 +1,8 @@
 package net.des.darkmoonproject;
 
 import com.mojang.logging.LogUtils;
+import net.des.darkmoonproject.init.DMPBlocks;
+import net.des.darkmoonproject.init.DMPItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +22,10 @@ public class DarkMoonProject
     public DarkMoonProject()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // Items and blocks initialization
+        DMPItems.register(modEventBus);
+        DMPBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
