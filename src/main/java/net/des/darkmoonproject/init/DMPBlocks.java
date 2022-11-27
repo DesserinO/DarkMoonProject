@@ -18,6 +18,8 @@ public class DMPBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, DarkMoonProject.MOD_ID);
 
+    public static final CreativeModeTab BLOCK_TAB = DMPCreativeTabs.DARKMOONPROJECT_BLOCK_TAB;
+
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab) {
         return DMPItems.ITEMS.register(name, () -> new BlockItem(block.get(),
@@ -29,6 +31,23 @@ public class DMPBlocks {
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
+
+    // ↓↓↓ Registering blocks ↓↓↓
+    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).
+                    requiresCorrectToolForDrops().strength(3f)), BLOCK_TAB);
+
+    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).
+                    requiresCorrectToolForDrops().strength(7f)), BLOCK_TAB);
+
+    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).
+                    requiresCorrectToolForDrops().strength(5f)), BLOCK_TAB);
+
+    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).
+                    requiresCorrectToolForDrops().strength(6f)), BLOCK_TAB);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

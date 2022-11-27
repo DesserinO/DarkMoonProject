@@ -1,0 +1,12 @@
+{
+  "item.darkmoonproject.raw_tin": "Raw Tin",
+  "item.darkmoonproject.tin_ingot": "Tin Ingot",
+
+  "block.darkmoonproject.tin_ore": "Tin Ore",
+  "block.darkmoonproject.tin_block": "Tin Block",
+  "block.darkmoonproject.raw_tin_block": "Raw Tin Block",
+  "block.darkmoonproject.deepslate_tin_ore": "Deepslate Tin Ore",
+
+  "itemGroup.darkmoonproject_item_tab": "Dark Moon Project: Items",
+  "itemGroup.darkmoonproject_block_tab": "Dark Moon Project: Blocks"
+}

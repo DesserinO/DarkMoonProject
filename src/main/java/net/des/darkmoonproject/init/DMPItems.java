@@ -12,6 +12,16 @@ public class DMPItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, DarkMoonProject.MOD_ID);
 
+    public static final CreativeModeTab ITEM_TAB = DMPCreativeTabs.DARKMOONPROJECT_ITEM_TAB;
+
+    // ↓↓↓ Registering items ↓↓↓
+    public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
+    public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
