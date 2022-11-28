@@ -3,6 +3,8 @@ package net.des.darkmoonproject;
 import com.mojang.logging.LogUtils;
 import net.des.darkmoonproject.init.DMPBlocks;
 import net.des.darkmoonproject.init.DMPItems;
+import net.des.darkmoonproject.world.feature.DMPConfiguredFeatures;
+import net.des.darkmoonproject.world.feature.DMPPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,6 +28,9 @@ public class DarkMoonProject
         // Items and blocks initialization
         DMPItems.register(modEventBus);
         DMPBlocks.register(modEventBus);
+
+        DMPConfiguredFeatures.register(modEventBus);
+        DMPPlacedFeatures.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

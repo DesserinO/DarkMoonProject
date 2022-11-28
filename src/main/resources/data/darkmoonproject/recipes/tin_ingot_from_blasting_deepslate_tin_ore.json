@@ -2,9 +2,9 @@
   "type": "minecraft:blasting",
   "cookingtime": 100,
   "experience": 0.7,
-  "group": "iron_ingot",
+  "group": "tin_ingot",
   "ingredient": {
-    "item": "darkmoonproject:deepslate_tin_ore"
+    "tag": "forge:ores_in_ground/tin"
   },
   "result": "darkmoonproject:tin_ingot"
 }
