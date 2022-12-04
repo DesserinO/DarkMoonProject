@@ -1,0 +1,12 @@
+{
+  "type": "darkmoonproject:cobblestone_crusher",
+  "ingredients": [
+    {
+      "tag": "forge:raw_materials/tin"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:tin_dust",
+    "count": 2
+  }
+}

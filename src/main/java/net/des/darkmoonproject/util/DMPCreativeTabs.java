@@ -1,5 +1,7 @@
-package net.des.darkmoonproject.init;
+package net.des.darkmoonproject.util;
 
+import net.des.darkmoonproject.init.DMPBlocks;
+import net.des.darkmoonproject.init.DMPItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

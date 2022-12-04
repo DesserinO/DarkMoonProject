@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "darkmoonproject:copper_dust"
+    },
+    "$": {
+      "item": "darkmoonproject:tin_dust"
+    }
+  },
+  "pattern": [
+    "$#",
+    "##"
+  ],
+  "result": {
+    "item": "darkmoonproject:bronze_dust",
+    "count": 4
+  }
+}

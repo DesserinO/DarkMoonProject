@@ -1,0 +1,12 @@
+{
+  "type": "darkmoonproject:cobblestone_crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_block"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:gold_dust",
+    "count": 9
+  }
+}

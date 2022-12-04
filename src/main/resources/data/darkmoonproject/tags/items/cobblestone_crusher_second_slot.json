@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gravel",
+    "minecraft:glowstone_dust",
+    "minecraft:sand",
+    "minecraft:bone_meal",
+    "darkmoonproject:copper_dust",
+    "darkmoonproject:iron_dust",
+    "darkmoonproject:gold_dust",
+    "darkmoonproject:lapis_dust",
+    "darkmoonproject:coal_dust",
+    "darkmoonproject:tin_dust"
+  ]
+}

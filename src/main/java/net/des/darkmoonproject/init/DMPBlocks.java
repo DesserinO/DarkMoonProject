@@ -1,6 +1,8 @@
 package net.des.darkmoonproject.init;
 
 import net.des.darkmoonproject.DarkMoonProject;
+import net.des.darkmoonproject.block.custom.CobblestoneCrusher;
+import net.des.darkmoonproject.util.DMPCreativeTabs;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -48,6 +50,10 @@ public class DMPBlocks {
     public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).
                     requiresCorrectToolForDrops().strength(6f)), BLOCK_TAB);
+
+    public static final RegistryObject<Block> COBBLESTONE_CRUSHER = registerBlock("cobblestone_crusher",
+            () -> new CobblestoneCrusher(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), BLOCK_TAB);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

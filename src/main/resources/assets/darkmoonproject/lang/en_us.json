@@ -1,11 +1,26 @@
 {
   "item.darkmoonproject.raw_tin": "Raw Tin",
+
   "item.darkmoonproject.tin_ingot": "Tin Ingot",
+
+  "item.darkmoonproject.tin_dust": "Tin Dust",
+  "item.darkmoonproject.coal_dust": "Coal Dust",
+  "item.darkmoonproject.diamond_dust": "Diamond Dust",
+  "item.darkmoonproject.emerald_dust": "Emerald Dust",
+  "item.darkmoonproject.lapis_dust": "Lapis Dust",
+  "item.darkmoonproject.nether_quartz_dust": "Nether Quartz Dust",
+  "item.darkmoonproject.amethyst_dust": "Amethyst Dust",
+  "item.darkmoonproject.iron_dust": "Iron Dust",
+  "item.darkmoonproject.copper_dust": "Copper Dust",
+  "item.darkmoonproject.gold_dust": "Gold Dust",
+  "item.darkmoonproject.bronze_dust": "Bronze Dust",
 
   "block.darkmoonproject.tin_ore": "Tin Ore",
   "block.darkmoonproject.tin_block": "Tin Block",
   "block.darkmoonproject.raw_tin_block": "Raw Tin Block",
   "block.darkmoonproject.deepslate_tin_ore": "Deepslate Tin Ore",
+
+  "block.darkmoonproject.cobblestone_crusher": "Crusher",
 
   "itemGroup.darkmoonproject_item_tab": "Dark Moon Project: Items",
   "itemGroup.darkmoonproject_block_tab": "Dark Moon Project: Blocks"
