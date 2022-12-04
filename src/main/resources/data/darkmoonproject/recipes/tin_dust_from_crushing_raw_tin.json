@@ -1,0 +1,11 @@
+{
+  "type": "darkmoonproject:cobblestone_crusher",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/tin"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:tin_dust"
+  }
+}

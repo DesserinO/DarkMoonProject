@@ -1,0 +1,12 @@
+{
+  "type": "darkmoonproject:cobblestone_crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_block"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:copper_dust",
+    "count": 9
+  }
+}

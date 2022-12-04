@@ -1,0 +1,12 @@
+{
+  "type": "darkmoonproject:cobblestone_crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:lapis_block"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:lapis_dust",
+    "count": 9
+  }
+}

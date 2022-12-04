@@ -1,10 +1,15 @@
 package net.des.darkmoonproject;
 
 import com.mojang.logging.LogUtils;
+import net.des.darkmoonproject.block.entity.DMPBlockEntities;
+import net.des.darkmoonproject.client.gui.DMPMenuTypes;
+import net.des.darkmoonproject.client.gui.machine.CobblestoneCrusherScreen;
 import net.des.darkmoonproject.init.DMPBlocks;
 import net.des.darkmoonproject.init.DMPItems;
+import net.des.darkmoonproject.recipe.DMPRecipes;
 import net.des.darkmoonproject.world.feature.DMPConfiguredFeatures;
 import net.des.darkmoonproject.world.feature.DMPPlacedFeatures;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -32,6 +37,11 @@ public class DarkMoonProject
         DMPConfiguredFeatures.register(modEventBus);
         DMPPlacedFeatures.register(modEventBus);
 
+        DMPBlockEntities.register(modEventBus);
+        DMPMenuTypes.register(modEventBus);
+
+        DMPRecipes.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -51,7 +61,7 @@ public class DarkMoonProject
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            MenuScreens.register(DMPMenuTypes.COBBLESTONE_CRUSHER_MENU.get(), CobblestoneCrusherScreen::new);
         }
     }
 }

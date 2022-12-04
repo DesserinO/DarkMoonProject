@@ -7,7 +7,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags;
 
 public class DMPTags {
     public static class Blocks {
@@ -24,6 +23,11 @@ public class DMPTags {
         // Initializing tags
         public static final TagKey<Item> RAW_TIN = forgeTag("raw_materials/raw_tin");
         public static final TagKey<Item> TIN_INGOT = forgeTag("ingots/tin_ingot");
+
+        public static final TagKey<Item> COBBLESTONE_CRUSHER_FIRST_SLOT =
+                tag("cobblestone_crusher_first_slot");
+        public static final TagKey<Item> COBBLESTONE_CRUSHER_SECOND_SLOT =
+                tag("cobblestone_crusher_second_slot");
 
 
         private static TagKey<Item> tag(String name) {
