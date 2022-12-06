@@ -29,6 +29,14 @@ public class DMPTags {
         public static final TagKey<Item> COBBLESTONE_CRUSHER_SECOND_SLOT =
                 tag("cobblestone_crusher_second_slot");
 
+        public static final TagKey<Item> COBBLESTONE_ALLOY_SMELTER_FIRST_SLOT =
+                tag("cobblestone_alloy_smelter_first_slot");
+        public static final TagKey<Item> COBBLESTONE_ALLOY_SMELTER_SECOND_SLOT =
+                tag("cobblestone_alloy_smelter_second_slot");
+
+        public static final TagKey<Item> COBBLESTONE_ALLOY_SMELTER_OUTPUT_SLOT =
+                tag("cobblestone_alloy_smelter_output_slot");
+
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(DarkMoonProject.MOD_ID, name));

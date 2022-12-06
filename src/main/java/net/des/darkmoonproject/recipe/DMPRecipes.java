@@ -14,6 +14,10 @@ public class DMPRecipes {
     public static final RegistryObject<RecipeSerializer<CobblestoneCrusherRecipe>> COBBLESTONE_CRUSHER =
             SERIALIZERS.register("cobblestone_crusher", () -> CobblestoneCrusherRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<CobblestoneAlloySmelterRecipe>> COBBLESTONE_ALLOY_SMELTER =
+            SERIALIZERS.register("cobblestone_alloy_smelter",
+                    () -> CobblestoneAlloySmelterRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

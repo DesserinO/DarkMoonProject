@@ -23,6 +23,12 @@ public class DMPItems {
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
 
+    public static final RegistryObject<Item> REDSTONE_INGOT = ITEMS.register("redstone_ingot",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
+    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
     // ↓↓↓ DUSTS ↓↓↓
     public static final RegistryObject<Item> TIN_DUST = ITEMS.register("tin_dust",
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
@@ -55,6 +61,12 @@ public class DMPItems {
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
 
     public static final RegistryObject<Item> BRONZE_DUST = ITEMS.register("bronze_dust",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
+    public static final RegistryObject<Item> REDSTONE_DUST = ITEMS.register("redstone_dust",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
+    public static final RegistryObject<Item> STEEL_DUST = ITEMS.register("steel_dust",
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
 
 

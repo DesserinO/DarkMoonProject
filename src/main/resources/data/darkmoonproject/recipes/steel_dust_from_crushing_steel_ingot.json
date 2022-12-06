@@ -1,0 +1,11 @@
+{
+  "type": "darkmoonproject:cobblestone_crusher",
+  "ingredients": [
+    {
+      "item": "darkmoonproject:steel_ingot"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:steel_dust"
+  }
+}

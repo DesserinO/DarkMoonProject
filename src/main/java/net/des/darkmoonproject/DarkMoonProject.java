@@ -3,6 +3,7 @@ package net.des.darkmoonproject;
 import com.mojang.logging.LogUtils;
 import net.des.darkmoonproject.block.entity.DMPBlockEntities;
 import net.des.darkmoonproject.client.gui.DMPMenuTypes;
+import net.des.darkmoonproject.client.gui.machine.CobblestoneAlloySmelterScreen;
 import net.des.darkmoonproject.client.gui.machine.CobblestoneCrusherScreen;
 import net.des.darkmoonproject.init.DMPBlocks;
 import net.des.darkmoonproject.init.DMPItems;
@@ -62,6 +63,7 @@ public class DarkMoonProject
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(DMPMenuTypes.COBBLESTONE_CRUSHER_MENU.get(), CobblestoneCrusherScreen::new);
+            MenuScreens.register(DMPMenuTypes.COBBLESTONE_ALLOY_SMELTER_MENU.get(), CobblestoneAlloySmelterScreen::new);
         }
     }
 }
