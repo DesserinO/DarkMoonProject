@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "darkmoonproject:copper_dust",
+    "darkmoonproject:tin_dust",
+    "darkmoonproject:iron_dust",
+    "darkmoonproject:coal_dust",
+    "darkmoonproject:steel_dust",
+    "minecraft:redstone"
+  ]
+}

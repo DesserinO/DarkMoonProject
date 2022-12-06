@@ -1,10 +1,8 @@
 package net.des.darkmoonproject.block.entity.machine;
 
-import net.des.darkmoonproject.block.custom.CobblestoneCrusher;
 import net.des.darkmoonproject.block.entity.DMPBlockEntities;
-import net.des.darkmoonproject.block.entity.WrappedHandler;
-import net.des.darkmoonproject.client.gui.machine.CobblestoneCrusherMenu;
-import net.des.darkmoonproject.recipe.CobblestoneCrusherRecipe;
+import net.des.darkmoonproject.client.gui.machine.CobblestoneAlloySmelterMenu;
+import net.des.darkmoonproject.recipe.CobblestoneAlloySmelterRecipe;
 import net.des.darkmoonproject.util.DMPTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,9 +17,11 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.*;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -31,8 +31,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.Optional;
 
-public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(2) {
+public class CobblestoneAlloySmelterEntity extends BlockEntity implements MenuProvider {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -41,8 +41,9 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch (slot) {
-                case 0 -> stack.is(DMPTags.Items.COBBLESTONE_CRUSHER_FIRST_SLOT);
-                case 1 -> stack.is(DMPTags.Items.COBBLESTONE_CRUSHER_SECOND_SLOT);
+                case 0 -> stack.is(DMPTags.Items.COBBLESTONE_ALLOY_SMELTER_FIRST_SLOT);
+                case 1 -> stack.is(DMPTags.Items.COBBLESTONE_ALLOY_SMELTER_SECOND_SLOT);
+                case 2 -> stack.is(DMPTags.Items.COBBLESTONE_ALLOY_SMELTER_OUTPUT_SLOT);
                 default -> super.isItemValid(slot, stack);
             };
         }
@@ -50,7 +51,7 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
-    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+    /*private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
             Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1, (i, s) -> false)),
                     Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
                             (index, stack) -> itemHandler.isItemValid(0, stack))),
@@ -60,21 +61,21 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
                     Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
                             (index, stack) -> itemHandler.isItemValid(0, stack))),
                     Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
-                            (index, stack) -> itemHandler.isItemValid(0, stack))));
+                            (index, stack) -> itemHandler.isItemValid(0, stack))));*/
 
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 800;
 
-    public CobblestoneCrusherEntity(BlockPos pos, BlockState state) {
-        super(DMPBlockEntities.COBBLESTONE_CRUSHER.get(), pos, state);
+    public CobblestoneAlloySmelterEntity(BlockPos pos, BlockState state) {
+        super(DMPBlockEntities.COBBLESTONE_ALLOY_SMELTER.get(), pos, state);
 
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> CobblestoneCrusherEntity.this.progress;
-                    case 1 -> CobblestoneCrusherEntity.this.maxProgress;
+                    case 0 -> CobblestoneAlloySmelterEntity.this.progress;
+                    case 1 -> CobblestoneAlloySmelterEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -82,8 +83,8 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> CobblestoneCrusherEntity.this.progress = value;
-                    case 1 -> CobblestoneCrusherEntity.this.maxProgress = value;
+                    case 0 -> CobblestoneAlloySmelterEntity.this.progress = value;
+                    case 1 -> CobblestoneAlloySmelterEntity.this.maxProgress = value;
                 }
             }
 
@@ -97,13 +98,13 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
     // Name of block in GUI
     @Override
     public Component getDisplayName() {
-        return Component.literal("§fCrusher");
+        return Component.literal("§fAlloy Smelter");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new CobblestoneCrusherMenu(id, inventory, this, this.data);
+        return new CobblestoneAlloySmelterMenu(id, inventory, this, this.data);
     }
 
     @Override
@@ -113,8 +114,8 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
                 return lazyItemHandler.cast();
             }
 
-            if(directionWrappedHandlerMap.containsKey(side)) {
-                Direction localDir = this.getBlockState().getValue(CobblestoneCrusher.FACING);
+            /*if(directionWrappedHandlerMap.containsKey(side)) {
+                Direction localDir = this.getBlockState().getValue(CobblestoneAlloySmelter.FACING);
 
                 if(side == Direction.UP || side == Direction.DOWN) {
                     return directionWrappedHandlerMap.get(side).cast();
@@ -126,7 +127,7 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
                     case SOUTH -> directionWrappedHandlerMap.get(side).cast();
                     case WEST -> directionWrappedHandlerMap.get(side.getCounterClockWise()).cast();
                 };
-            }
+            }*/
         }
 
         return super.getCapability(cap, side);
@@ -147,7 +148,7 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
-        nbt.putInt("cobblestone_crusher.progress", this.progress);
+        nbt.putInt("cobblestone_alloy_smelter.progress", this.progress);
 
         super.saveAdditional(nbt);
     }
@@ -156,7 +157,7 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("cobblestone_crusher.progress");
+        progress = nbt.getInt("cobblestone_alloy_smelter.progress");
     }
 
     public void drops() {
@@ -168,12 +169,12 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level level, BlockPos pos, BlockState state, CobblestoneCrusherEntity pEntity) {
+    public static void tick(Level level, BlockPos pos, BlockState state, CobblestoneAlloySmelterEntity pEntity) {
         if(level.isClientSide()) {
             return;
         }
 
-        if (level.hasNeighborSignal(pos)) {
+        if (level.getBlockState(pEntity.getBlockPos().below()).getBlock() == Blocks.MAGMA_BLOCK) {
             if(hasRecipe(pEntity)) {
                 pEntity.progress++;
                 setChanged(level, pos, state);
@@ -188,19 +189,20 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
         }
     }
 
-    private static void craftItem(CobblestoneCrusherEntity pEntity) {
+    private static void craftItem(CobblestoneAlloySmelterEntity pEntity) {
         Level level = pEntity.level;
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<CobblestoneCrusherRecipe> recipe = level.getRecipeManager()
-                .getRecipeFor(CobblestoneCrusherRecipe.Type.INSTANCE, inventory, level);
+        Optional<CobblestoneAlloySmelterRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(CobblestoneAlloySmelterRecipe.Type.INSTANCE, inventory, level);
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
-            pEntity.itemHandler.insertItem(1, recipe.get().getResultItem(), false);
+            pEntity.itemHandler.extractItem(1, 1, false);
+            pEntity.itemHandler.insertItem(2, recipe.get().getResultItem(), false);
 
             pEntity.resetProgress();
         }
@@ -210,25 +212,25 @@ public class CobblestoneCrusherEntity extends BlockEntity implements MenuProvide
         this.progress = 0;
     }
 
-    private static boolean hasRecipe(CobblestoneCrusherEntity entity) {
+    private static boolean hasRecipe(CobblestoneAlloySmelterEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<CobblestoneCrusherRecipe> recipe = level.getRecipeManager()
-                .getRecipeFor(CobblestoneCrusherRecipe.Type.INSTANCE, inventory, level);
+        Optional<CobblestoneAlloySmelterRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(CobblestoneAlloySmelterRecipe.Type.INSTANCE, inventory, level);
 
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
                 canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
-        return inventory.getItem(1).getItem() == stack.getItem() || inventory.getItem(1).isEmpty();
+        return inventory.getItem(2).getItem() == stack.getItem() || inventory.getItem(2).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
-        return inventory.getItem(1).getMaxStackSize() > inventory.getItem(1).getCount();
+        return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount();
     }
 }

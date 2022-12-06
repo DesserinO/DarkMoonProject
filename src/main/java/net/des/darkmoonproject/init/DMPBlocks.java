@@ -1,6 +1,7 @@
 package net.des.darkmoonproject.init;
 
 import net.des.darkmoonproject.DarkMoonProject;
+import net.des.darkmoonproject.block.custom.CobblestoneAlloySmelter;
 import net.des.darkmoonproject.block.custom.CobblestoneCrusher;
 import net.des.darkmoonproject.util.DMPCreativeTabs;
 import net.minecraft.world.item.BlockItem;
@@ -53,6 +54,10 @@ public class DMPBlocks {
 
     public static final RegistryObject<Block> COBBLESTONE_CRUSHER = registerBlock("cobblestone_crusher",
             () -> new CobblestoneCrusher(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), BLOCK_TAB);
+
+    public static final RegistryObject<Block> COBBLESTONE_ALLOY_SMELTER = registerBlock("cobblestone_alloy_smelter",
+            () -> new CobblestoneAlloySmelter(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), BLOCK_TAB);
 
     public static void register(IEventBus eventBus) {

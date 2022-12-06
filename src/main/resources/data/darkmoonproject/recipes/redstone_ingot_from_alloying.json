@@ -1,0 +1,15 @@
+{
+  "type": "darkmoonproject:cobblestone_alloy_smelter",
+  "ingredients": [
+    {
+      "item": "darkmoonproject:iron_dust"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:redstone_ingot",
+    "count": 2
+  }
+}

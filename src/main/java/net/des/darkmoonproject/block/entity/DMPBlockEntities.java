@@ -1,6 +1,7 @@
 package net.des.darkmoonproject.block.entity;
 
 import net.des.darkmoonproject.DarkMoonProject;
+import net.des.darkmoonproject.block.entity.machine.CobblestoneAlloySmelterEntity;
 import net.des.darkmoonproject.block.entity.machine.CobblestoneCrusherEntity;
 import net.des.darkmoonproject.init.DMPBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -17,6 +18,11 @@ public class DMPBlockEntities {
             BLOCK_ENTITIES.register("cobblestone_crusher", () ->
                     BlockEntityType.Builder.of(CobblestoneCrusherEntity::new,
                             DMPBlocks.COBBLESTONE_CRUSHER.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CobblestoneAlloySmelterEntity>> COBBLESTONE_ALLOY_SMELTER =
+            BLOCK_ENTITIES.register("cobblestone_alloy_smelter", () ->
+                    BlockEntityType.Builder.of(CobblestoneAlloySmelterEntity::new,
+                            DMPBlocks.COBBLESTONE_ALLOY_SMELTER.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {
