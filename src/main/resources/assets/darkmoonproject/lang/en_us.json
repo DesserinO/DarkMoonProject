@@ -2,6 +2,8 @@
   "item.darkmoonproject.raw_tin": "Raw Tin",
 
   "item.darkmoonproject.tin_ingot": "Tin Ingot",
+  "item.darkmoonproject.steel_ingot": "Steel Ingot",
+  "item.darkmoonproject.redstone_ingot": "Redstone Alloy Ingot",
 
   "item.darkmoonproject.tin_dust": "Tin Dust",
   "item.darkmoonproject.coal_dust": "Coal Dust",
@@ -14,6 +16,8 @@
   "item.darkmoonproject.copper_dust": "Copper Dust",
   "item.darkmoonproject.gold_dust": "Gold Dust",
   "item.darkmoonproject.bronze_dust": "Bronze Dust",
+  "item.darkmoonproject.steel_dust": "Steel Dust",
+  "item.darkmoonproject.redstone_iron_dust": "Redstone Alloy Dust",
 
   "block.darkmoonproject.tin_ore": "Tin Ore",
   "block.darkmoonproject.tin_block": "Tin Block",
@@ -21,6 +25,7 @@
   "block.darkmoonproject.deepslate_tin_ore": "Deepslate Tin Ore",
 
   "block.darkmoonproject.cobblestone_crusher": "Crusher",
+  "block.darkmoonproject.cobblestone_alloy_smelter": "Smeltery",
 
   "itemGroup.darkmoonproject_item_tab": "Dark Moon Project: Items",
   "itemGroup.darkmoonproject_block_tab": "Dark Moon Project: Blocks"
