@@ -63,7 +63,7 @@ public class DMPItems {
     public static final RegistryObject<Item> BRONZE_DUST = ITEMS.register("bronze_dust",
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
 
-    public static final RegistryObject<Item> REDSTONE_DUST = ITEMS.register("redstone_dust",
+    public static final RegistryObject<Item> REDSTONE_DUST = ITEMS.register("redstone_iron_dust",
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
 
     public static final RegistryObject<Item> STEEL_DUST = ITEMS.register("steel_dust",

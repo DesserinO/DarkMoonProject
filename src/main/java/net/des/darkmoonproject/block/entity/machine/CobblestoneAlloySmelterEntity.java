@@ -1,6 +1,8 @@
 package net.des.darkmoonproject.block.entity.machine;
 
+import net.des.darkmoonproject.block.custom.CobblestoneAlloySmelter;
 import net.des.darkmoonproject.block.entity.DMPBlockEntities;
+import net.des.darkmoonproject.block.entity.WrappedHandler;
 import net.des.darkmoonproject.client.gui.machine.CobblestoneAlloySmelterMenu;
 import net.des.darkmoonproject.recipe.CobblestoneAlloySmelterRecipe;
 import net.des.darkmoonproject.util.DMPTags;
@@ -51,17 +53,16 @@ public class CobblestoneAlloySmelterEntity extends BlockEntity implements MenuPr
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
-    /*private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
-            Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1, (i, s) -> false)),
-                    Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
-                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+    private final Map<Direction, LazyOptional<WrappedHandler>> directionWrappedHandlerMap =
+            Map.of(Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))),
                     Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
-                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))),
                     Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1, (i, s) -> false)),
                     Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 1,
-                            (index, stack) -> itemHandler.isItemValid(0, stack))),
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))),
                     Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0 || index == 1,
-                            (index, stack) -> itemHandler.isItemValid(0, stack))));*/
+                            (index, stack) -> itemHandler.isItemValid(0, stack) || itemHandler.isItemValid(1, stack))));
 
     protected final ContainerData data;
     private int progress = 0;
@@ -114,7 +115,7 @@ public class CobblestoneAlloySmelterEntity extends BlockEntity implements MenuPr
                 return lazyItemHandler.cast();
             }
 
-            /*if(directionWrappedHandlerMap.containsKey(side)) {
+            if(directionWrappedHandlerMap.containsKey(side)) {
                 Direction localDir = this.getBlockState().getValue(CobblestoneAlloySmelter.FACING);
 
                 if(side == Direction.UP || side == Direction.DOWN) {
@@ -127,7 +128,7 @@ public class CobblestoneAlloySmelterEntity extends BlockEntity implements MenuPr
                     case SOUTH -> directionWrappedHandlerMap.get(side).cast();
                     case WEST -> directionWrappedHandlerMap.get(side.getCounterClockWise()).cast();
                 };
-            }*/
+            }
         }
 
         return super.getCapability(cap, side);
