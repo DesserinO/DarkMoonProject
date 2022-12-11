@@ -2,8 +2,6 @@
   "item.darkmoonproject.raw_tin": "Raw Tin",
 
   "item.darkmoonproject.tin_ingot": "Tin Ingot",
-  "item.darkmoonproject.steel_ingot": "Steel Ingot",
-  "item.darkmoonproject.redstone_ingot": "Redstone Alloy Ingot",
 
   "item.darkmoonproject.tin_dust": "Tin Dust",
   "item.darkmoonproject.coal_dust": "Coal Dust",
@@ -16,8 +14,19 @@
   "item.darkmoonproject.copper_dust": "Copper Dust",
   "item.darkmoonproject.gold_dust": "Gold Dust",
   "item.darkmoonproject.bronze_dust": "Bronze Dust",
-  "item.darkmoonproject.steel_dust": "Steel Dust",
-  "item.darkmoonproject.redstone_iron_dust": "Redstone Alloy Dust",
+
+  "item.darkmoonproject.cobblestone_hammer": "Cobblestone Hammer",
+  "item.darkmoonproject.bronze_hammer": "Bronze Hammer",
+  "item.darkmoonproject.bronze_screwdriver": "Bronze Screwdriver",
+  "item.darkmoonproject.bronze_wire_cutter": "Bronze Wire Cutter",
+  "item.darkmoonproject.iron_hammer": "Iron Hammer",
+  "item.darkmoonproject.iron_screwdriver": "Iron Screwdriver",
+  "item.darkmoonproject.iron_wire_cutter": "Iron Wire Cutter",
+
+  "item.darkmoonproject.cobblestone_plate_pattern": "Cobblestone Plate Pattern",
+  "item.darkmoonproject.cobblestone_rod_pattern": "Cobblestone Rod Pattern",
+  "item.darkmoonproject.bronze_plate_pattern": "Bronze Plate Pattern",
+  "item.darkmoonproject.bronze_rod_pattern": "Bronze Rod Pattern",
 
   "block.darkmoonproject.tin_ore": "Tin Ore",
   "block.darkmoonproject.tin_block": "Tin Block",
@@ -26,7 +35,9 @@
 
   "block.darkmoonproject.cobblestone_crusher": "Crusher",
   "block.darkmoonproject.cobblestone_alloy_smelter": "Smeltery",
+  "block.darkmoonproject.assembly_table": "Assembly Table",
 
   "itemGroup.darkmoonproject_item_tab": "Dark Moon Project: Items",
-  "itemGroup.darkmoonproject_block_tab": "Dark Moon Project: Blocks"
+  "itemGroup.darkmoonproject_block_tab": "Dark Moon Project: Blocks",
+  "itemGroup.darkmoonproject_tool_tab": "Dark Moon Project: Tools"
 }

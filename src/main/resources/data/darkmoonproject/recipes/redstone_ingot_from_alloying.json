@@ -5,11 +5,12 @@
       "item": "darkmoonproject:iron_dust"
     },
     {
-      "item": "minecraft:redstone"
+      "item": "minecraft:redstone",
+      "count": 4
     }
   ],
   "output": {
-    "item": "darkmoonproject:redstone_ingot",
+    "item": "darkmoonproject:redstone_alloy_ingot",
     "count": 2
   }
 }

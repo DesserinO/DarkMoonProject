@@ -18,7 +18,7 @@ import net.minecraft.world.item.ItemStack;
 public class CobblestoneAlloySmelterRecipeCategory implements IRecipeCategory<CobblestoneAlloySmelterRecipe>{
     public final static ResourceLocation UID = new ResourceLocation(DarkMoonProject.MOD_ID, "cobblestone_alloy_smelter");
     public final static ResourceLocation TEXTURE =
-            new ResourceLocation(DarkMoonProject.MOD_ID, "textures/gui/cobblestone_crusher_gui.png");
+            new ResourceLocation(DarkMoonProject.MOD_ID, "textures/gui/cobblestone_alloy_smelter_gui.png");
 
     private final IDrawable background;
     private final IDrawable icon;
@@ -49,8 +49,8 @@ public class CobblestoneAlloySmelterRecipeCategory implements IRecipeCategory<Co
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, CobblestoneAlloySmelterRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 14, 33).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 24, 33).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.INPUT, 44, 33).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 117, 33).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 123, 33).addItemStack(recipe.getResultItem());
     }
 }

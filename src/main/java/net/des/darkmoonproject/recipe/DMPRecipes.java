@@ -18,6 +18,10 @@ public class DMPRecipes {
             SERIALIZERS.register("cobblestone_alloy_smelter",
                     () -> CobblestoneAlloySmelterRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<AssemblyTableRecipe>> ASSEMBLY_TABLE =
+            SERIALIZERS.register("assembly_table",
+                    () -> AssemblyTableRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

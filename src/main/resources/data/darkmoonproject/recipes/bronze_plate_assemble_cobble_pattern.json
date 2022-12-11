@@ -1,0 +1,17 @@
+{
+  "type": "darkmoonproject:assembly_table",
+  "ingredients": [
+    {
+      "item": "darkmoonproject:bronze_ingot"
+    },
+    {
+      "tag": "darkmoonproject:all_plate_patterns"
+    },
+    {
+      "tag": "darkmoonproject:hammer_tools"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:bronze_plate"
+  }
+}

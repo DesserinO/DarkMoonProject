@@ -1,6 +1,7 @@
 package net.des.darkmoonproject.client.gui;
 
 import net.des.darkmoonproject.DarkMoonProject;
+import net.des.darkmoonproject.client.gui.machine.AssemblyTableMenu;
 import net.des.darkmoonproject.client.gui.machine.CobblestoneAlloySmelterMenu;
 import net.des.darkmoonproject.client.gui.machine.CobblestoneCrusherMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -21,6 +22,9 @@ public class DMPMenuTypes {
 
     public static final RegistryObject<MenuType<CobblestoneAlloySmelterMenu>> COBBLESTONE_ALLOY_SMELTER_MENU =
             registerMenuType(CobblestoneAlloySmelterMenu::new, "cobblestone_alloy_smelter_menu");
+
+    public static final RegistryObject<MenuType<AssemblyTableMenu>> ASSEMBLY_TABLE_MENU =
+            registerMenuType(AssemblyTableMenu::new, "assembly_table_menu");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType
             (IContainerFactory<T> factory, String name) {

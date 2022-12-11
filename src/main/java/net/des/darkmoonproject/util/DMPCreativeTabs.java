@@ -21,4 +21,12 @@ public class DMPCreativeTabs {
                     return new ItemStack(DMPBlocks.TIN_ORE.get());
                 }
             };
+
+    public static final CreativeModeTab DARKMOONPROJECT_TOOL_TAB =
+            new CreativeModeTab("darkmoonproject_tool_tab") {
+                @Override
+                public ItemStack makeIcon() {
+                    return new ItemStack(DMPItems.BRONZE_HAMMER.get());
+                }
+            };
 }

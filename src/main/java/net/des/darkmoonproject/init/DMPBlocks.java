@@ -1,6 +1,7 @@
 package net.des.darkmoonproject.init;
 
 import net.des.darkmoonproject.DarkMoonProject;
+import net.des.darkmoonproject.block.custom.AssemblyTable;
 import net.des.darkmoonproject.block.custom.CobblestoneAlloySmelter;
 import net.des.darkmoonproject.block.custom.CobblestoneCrusher;
 import net.des.darkmoonproject.util.DMPCreativeTabs;
@@ -58,6 +59,10 @@ public class DMPBlocks {
 
     public static final RegistryObject<Block> COBBLESTONE_ALLOY_SMELTER = registerBlock("cobblestone_alloy_smelter",
             () -> new CobblestoneAlloySmelter(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), BLOCK_TAB);
+
+    public static final RegistryObject<Block> ASSEMBLY_TABLE = registerBlock("assembly_table",
+            () -> new AssemblyTable(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), BLOCK_TAB);
 
     public static void register(IEventBus eventBus) {

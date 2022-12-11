@@ -2,7 +2,7 @@
   "type": "darkmoonproject:cobblestone_crusher",
   "ingredients": [
     {
-      "item": "darkmoonproject:redstone_ingot"
+      "item": "darkmoonproject:redstone_alloy_ingot"
     }
   ],
   "output": {

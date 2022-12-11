@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "darkmoonproject:cobblestone_rod_pattern",
+    "darkmoonproject:bronze_rod_pattern",
+    "darkmoonproject:iron_rod_pattern"
+  ]
+}

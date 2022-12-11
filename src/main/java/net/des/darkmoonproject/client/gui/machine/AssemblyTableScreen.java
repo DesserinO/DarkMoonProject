@@ -9,12 +9,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class CobblestoneCrusherScreen extends AbstractContainerScreen<CobblestoneCrusherMenu> {
+public class AssemblyTableScreen extends AbstractContainerScreen<AssemblyTableMenu> {
 
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(DarkMoonProject.MOD_ID,"textures/gui/cobblestone_crusher_gui.png");
+            new ResourceLocation(DarkMoonProject.MOD_ID,"textures/gui/assembly_table_gui.png");
 
-    public CobblestoneCrusherScreen(CobblestoneCrusherMenu menu, Inventory inventory, Component component) {
+    public AssemblyTableScreen(AssemblyTableMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component);
     }
 
@@ -43,7 +43,7 @@ public class CobblestoneCrusherScreen extends AbstractContainerScreen<Cobbleston
             * 4 arg: actual start of arrow on gui image X (176); 5 arg: as a 4 arg but for Y (0)
             * 6 arg: increasing value from 0 (→), decreasing value from width of arrow (←);
             * 7 arg: increasing value from 0 (↓), decreasing value from height of arrow (↑); */
-            blit(pPoseStack, x + 71, y + 33, 176, 0, menu.getScaledProgress(), 16);
+            blit(pPoseStack, x + 103, y + 34, 176, 0, menu.getScaledProgress(), 13);
         }
     }
 

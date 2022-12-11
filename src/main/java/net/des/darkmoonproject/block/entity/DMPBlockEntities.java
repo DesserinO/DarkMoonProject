@@ -1,6 +1,7 @@
 package net.des.darkmoonproject.block.entity;
 
 import net.des.darkmoonproject.DarkMoonProject;
+import net.des.darkmoonproject.block.entity.machine.AssemblyTableEntity;
 import net.des.darkmoonproject.block.entity.machine.CobblestoneAlloySmelterEntity;
 import net.des.darkmoonproject.block.entity.machine.CobblestoneCrusherEntity;
 import net.des.darkmoonproject.init.DMPBlocks;
@@ -24,6 +25,10 @@ public class DMPBlockEntities {
                     BlockEntityType.Builder.of(CobblestoneAlloySmelterEntity::new,
                             DMPBlocks.COBBLESTONE_ALLOY_SMELTER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<AssemblyTableEntity>> ASSEMBLY_TABLE =
+            BLOCK_ENTITIES.register("assembly_table", () ->
+                    BlockEntityType.Builder.of(AssemblyTableEntity::new,
+                            DMPBlocks.ASSEMBLY_TABLE.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

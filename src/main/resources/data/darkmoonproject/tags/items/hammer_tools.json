@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "darkmoonproject:cobblestone_hammer",
+    "darkmoonproject:bronze_hammer",
+    "darkmoonproject:iron_hammer"
+  ]
+}

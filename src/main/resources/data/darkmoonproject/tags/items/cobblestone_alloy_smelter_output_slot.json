@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "darkmoonproject:redstone_ingot",
-    "darkmoonproject:steel_ingot"
+    "darkmoonproject:redstone_alloy_ingot"
   ]
 }

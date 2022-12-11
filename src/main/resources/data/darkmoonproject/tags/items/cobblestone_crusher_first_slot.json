@@ -19,7 +19,8 @@
     "minecraft:coal",
     "darkmoonproject:raw_tin",
     "darkmoonproject:tin_ingot",
+    "darkmoonproject:tin_ingot",
     "darkmoonproject:steel_ingot",
-    "darkmoonproject:redstone_ingot"
+    "darkmoonproject:redstone_alloy_ingot"
   ]
 }

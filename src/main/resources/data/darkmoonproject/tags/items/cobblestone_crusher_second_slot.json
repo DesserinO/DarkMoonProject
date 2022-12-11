@@ -10,8 +10,6 @@
     "darkmoonproject:gold_dust",
     "darkmoonproject:lapis_dust",
     "darkmoonproject:coal_dust",
-    "darkmoonproject:tin_dust",
-    "darkmoonproject:steel_dust",
-    "darkmoonproject:redstone_iron_dust"
+    "darkmoonproject:tin_dust"
   ]
 }

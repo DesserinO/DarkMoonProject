@@ -33,11 +33,14 @@ public class DMPTags {
                 tag("cobblestone_alloy_smelter_first_slot");
         public static final TagKey<Item> COBBLESTONE_ALLOY_SMELTER_SECOND_SLOT =
                 tag("cobblestone_alloy_smelter_second_slot");
-
         public static final TagKey<Item> COBBLESTONE_ALLOY_SMELTER_OUTPUT_SLOT =
                 tag("cobblestone_alloy_smelter_output_slot");
 
-
+        public static final TagKey<Item> PATTERNS = tag("patterns");
+        public static final TagKey<Item> ALL_PATTERNS = tag("all_patterns");
+        public static final TagKey<Item> HAMMER_TOOLS = tag("hammer_tools");
+        public static final TagKey<Item> SCREWDRIVER_TOOLS = tag("screwdriver_tools");
+        public static final TagKey<Item> WIRE_CUTTER_TOOLS = tag("wire_cutter_tools");
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(DarkMoonProject.MOD_ID, name));
         }
