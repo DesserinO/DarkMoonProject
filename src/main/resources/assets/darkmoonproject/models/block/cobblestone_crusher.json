@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "front": "darkmoonproject:block/cobblestone_crusher_side",
+    "front": "darkmoonproject:block/cobblestone_crusher_front",
     "side": "darkmoonproject:block/cobblestone_crusher_side",
     "top": "darkmoonproject:block/cobblestone_crusher_top"
   }

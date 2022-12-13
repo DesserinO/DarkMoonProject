@@ -53,6 +53,14 @@ public class DMPBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).
                     requiresCorrectToolForDrops().strength(6f)), BLOCK_TAB);
 
+    public static final RegistryObject<Block> BRONZE_BLOCK = registerBlock("bronze_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).
+                    requiresCorrectToolForDrops().strength(9f)), BLOCK_TAB);
+
+    public static final RegistryObject<Block> REDSTONE_ALLOY_BLOCK = registerBlock("redstone_alloy_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).
+                    requiresCorrectToolForDrops().strength(9f)), BLOCK_TAB);
+
     public static final RegistryObject<Block> COBBLESTONE_CRUSHER = registerBlock("cobblestone_crusher",
             () -> new CobblestoneCrusher(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), BLOCK_TAB);

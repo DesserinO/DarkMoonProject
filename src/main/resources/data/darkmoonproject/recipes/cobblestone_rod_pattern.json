@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "item": "darkmoonproject:cobblestone_rod_pattern"
+  }
+}

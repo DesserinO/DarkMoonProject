@@ -76,6 +76,9 @@ public class DMPItems {
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));*/
     public static final RegistryObject<Item> BRONZE_PLATE = ITEMS.register("bronze_plate",
             () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+    public static final RegistryObject<Item> WOODEN_PLATE = ITEMS.register("wooden_plate",
+            () -> new Item(new Item.Properties().tab(ITEM_TAB)));
+
 
     // ↓↓↓ RODS ↓↓↓
     public static final RegistryObject<Item> IRON_ROD = ITEMS.register("iron_rod",

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "S": {
+      "item": "darkmoonproject:wooden_plate"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "item": "darkmoonproject:cobblestone_plate_pattern"
+  }
+}

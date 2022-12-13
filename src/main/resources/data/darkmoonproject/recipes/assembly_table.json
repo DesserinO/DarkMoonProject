@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "X": {
+      "item": "minecraft:crafting_table"
+    },
+    "I": {
+      "item": "minecraft:anvil"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "F": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    "###",
+    "XCI",
+    "#F#"
+  ],
+  "result": {
+    "item": "darkmoonproject:assembly_table"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "darkmoonproject:assembly_table",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "tag": "darkmoonproject:all_rod_patterns"
+    },
+    {
+      "tag": "darkmoonproject:hammer_tools_iron_tier"
+    }
+  ],
+  "output": {
+    "item": "darkmoonproject:iron_rod"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "darkmoonproject:bronze_block"
+    },
+    "R": {
+      "item": "darkmoonproject:bronze_rod"
+    },
+    "P": {
+      "item": "darkmoonproject:bronze_plate"
+    }
+  },
+  "pattern": [
+    " #P",
+    "PR#",
+    "RP "
+  ],
+  "result": {
+    "item": "darkmoonproject:bronze_hammer"
+  }
+}

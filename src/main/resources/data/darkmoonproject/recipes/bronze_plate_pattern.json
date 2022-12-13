@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "darkmoonproject:bronze_plate"
+    },
+    "S": {
+      "item": "darkmoonproject:wooden_plate"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "item": "darkmoonproject:bronze_plate_pattern"
+  }
+}

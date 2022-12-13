@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "darkmoonproject:iron_rod"
+    },
+    "P": {
+      "item": "darkmoonproject:iron_plate"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    "P#P"
+  ],
+  "result": {
+    "item": "darkmoonproject:iron_screwdriver"
+  }
+}

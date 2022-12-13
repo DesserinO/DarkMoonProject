@@ -3,6 +3,6 @@
   "textures": {
     "front": "darkmoonproject:block/cobblestone_crusher_side",
     "side": "darkmoonproject:block/cobblestone_crusher_side",
-    "top": "darkmoonproject:block/cobblestone_crusher_top"
+    "top": "darkmoonproject:block/cobblestone_alloy_smelter_top"
   }
 }
