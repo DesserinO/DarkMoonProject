@@ -5,10 +5,10 @@
       "item": "minecraft:iron_block"
     },
     "R": {
-      "item": "darkmoonproject:iron_rod"
+      "tag": "forge:rods/iron"
     },
     "P": {
-      "item": "darkmoonproject:iron_plate"
+      "tag": "forge:plates/iron"
     }
   },
   "pattern": [

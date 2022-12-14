@@ -2,11 +2,10 @@
   "type": "darkmoonproject:cobblestone_alloy_smelter",
   "ingredients": [
     {
-      "item": "darkmoonproject:iron_dust"
+      "tag": "forge:dusts/iron"
     },
     {
-      "item": "minecraft:redstone",
-      "count": 4
+      "item": "minecraft:redstone"
     }
   ],
   "output": {

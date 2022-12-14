@@ -2,7 +2,7 @@
   "type": "darkmoonproject:cobblestone_crusher",
   "ingredients": [
     {
-      "item": "darkmoonproject:bronze_ingot"
+      "tag": "forge:ingots/bronze"
     }
   ],
   "output": {

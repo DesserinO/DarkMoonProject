@@ -5,7 +5,7 @@
       "item": "minecraft:cobblestone"
     },
     "S": {
-      "item": "darkmoonproject:wooden_plate"
+      "tag": "forge:plates/wooden"
     }
   },
   "pattern": [

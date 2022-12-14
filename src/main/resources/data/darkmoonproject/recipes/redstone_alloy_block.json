@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "tag": "forge:ingots/bronze"
+      "tag": "forge:ingots/redstone_alloy"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "###"
   ],
   "result": {
-    "item": "darkmoonproject:bronze_block"
+    "item": "darkmoonproject:redstone_alloy_block"
   }
 }

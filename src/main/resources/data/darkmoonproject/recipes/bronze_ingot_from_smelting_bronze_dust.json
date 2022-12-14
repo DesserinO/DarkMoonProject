@@ -4,7 +4,7 @@
   "experience": 0.7,
   "group": "bronze_ingot",
   "ingredient": {
-    "item": "darkmoonproject:bronze_dust"
+    "tag": "forge:dusts/bronze"
   },
   "result": "darkmoonproject:bronze_ingot"
 }

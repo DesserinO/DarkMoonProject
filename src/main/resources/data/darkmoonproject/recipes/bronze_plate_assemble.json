@@ -2,7 +2,7 @@
   "type": "darkmoonproject:assembly_table",
   "ingredients": [
     {
-      "item": "darkmoonproject:bronze_ingot"
+      "tag": "forge:ingots/bronze"
     },
     {
       "tag": "darkmoonproject:all_plate_patterns"

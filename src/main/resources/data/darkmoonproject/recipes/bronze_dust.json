@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "darkmoonproject:copper_dust"
+      "tag": "forge:dusts/copper"
     },
     "$": {
-      "item": "darkmoonproject:tin_dust"
+      "tag": "forge:dusts/tin"
     }
   },
   "pattern": [

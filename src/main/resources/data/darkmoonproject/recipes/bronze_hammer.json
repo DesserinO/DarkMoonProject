@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "darkmoonproject:bronze_block"
+      "tag": "forge:blocks/bronze"
     },
     "R": {
-      "item": "darkmoonproject:bronze_rod"
+      "tag": "forge:rods/bronze"
     },
     "P": {
-      "item": "darkmoonproject:bronze_plate"
+      "tag": "forge:plates/bronze"
     }
   },
   "pattern": [
